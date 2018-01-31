@@ -1,12 +1,16 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import Header from "./components/header.jsx";
+import Body from "./components/body.jsx";
+import Footer from "./components/footer.jsx";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+      <div>
+        <Header />
+        <Body />
+        <Footer />
       </div>
     );
   }
