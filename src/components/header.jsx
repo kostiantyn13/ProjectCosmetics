@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <Sty>
-        <div>GGGG</div>
+        <div>Header</div>
       </Sty>
     );
   }
@@ -16,7 +16,11 @@ class Header extends Component {
 export default Header;
 
 const Sty = styled.div`
-  height: 200px;
-  weigth: 100%;
-  background-color: green;
+  height: 100px;
+  width: 100%;
+  border: 1px solid green;
+  border-radius: 5px;
+  color: #468847;
+  background-color: #dff0d8;
+  clear: both;
 `;

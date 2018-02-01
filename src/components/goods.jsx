@@ -3,24 +3,21 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 //import Header from "components/header.jsx";
 
-class Footer extends Component {
+class Goods extends Component {
   render() {
     return (
       <Sty>
-        <div>Footer</div>
+        <div>Goods</div>
       </Sty>
     );
   }
 }
 
-export default Footer;
-
+export default Goods;
 const Sty = styled.div`
-  height: 100px;
+  height: 150px;
   width: 100%;
-  border: 1px solid green;
+  border: 1px solid black;
   border-radius: 5px;
-  color: #468847;
-  background-color: #dff0d8;
-  clear: both;
+  background-color: #e2dced;
 `;

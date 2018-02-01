@@ -16,7 +16,8 @@ class Menu_list extends Component {
 export default Menu_list;
 
 const Sty = styled.div`
-  height: 200px;
-  weigth: 200px;
+  height: 600px;
+  width: 200px;
   background-color: blue;
+  float: left;
 `;

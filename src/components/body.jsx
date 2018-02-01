@@ -9,6 +9,7 @@ class Body extends Component {
     return (
       <Sty>
         <div>
+          <p>Body</p>
           <Menu_list />
           <Field />
         </div>
@@ -19,7 +20,10 @@ class Body extends Component {
 
 export default Body;
 const Sty = styled.div`
-  height: 100%;
-  weigth: 100%;
-  background-color: brown;
+  height: 1000px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #268647;
+  background-color: #c5d6d3;
 `;
