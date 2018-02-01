@@ -20,4 +20,5 @@ const Sty = styled.div`
   border: 1px solid black;
   border-radius: 5px;
   background-color: #e3edf2;
+  box-shadow: 3px 3px 4px #cccccc;
 `;
