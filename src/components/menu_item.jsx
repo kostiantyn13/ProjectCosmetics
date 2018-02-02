@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-//import Header from "components/header.jsx";
 
-class Presentation extends Component {
+class Menu_item extends Component {
   render() {
     return (
       <Sty>
-        <div>Presentation</div>
+        <div>Menu_item</div>
       </Sty>
     );
   }
 }
 
-export default Presentation;
+export default Menu_item;
+
 const Sty = styled.div`
-  height: 400px;
-  width: 100%;
   border: 1px solid black;
-  border-radius: 5px;
-  background-color: #e3edf2;
+  height: 100%;
+  width: 100px;
+  background-color: #7896bf;
 `;
