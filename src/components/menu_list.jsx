@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
 
-class Menu_list extends Component {
+class MenuList extends Component {
   render() {
     return (
       <Sty>
-        <div>Menu_list</div>
+        <div>Menu list</div>
       </Sty>
     );
   }
 }
 
-export default Menu_list;
+export default MenuList;
 
-const Sty = styled.div`border-radius: 10px;`;
+const Sty = styled.div`
+  border-radius: 10px;
+`;
