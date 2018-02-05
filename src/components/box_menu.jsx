@@ -7,11 +7,7 @@ class Box_menu extends Component {
   render() {
     return (
       <Sty>
-        <div>
-          <div>
-            <Menu_list />
-          </div>
-        </div>
+        <Menu_list />
       </Sty>
     );
   }

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/header.jsx";
-import Body from "./components/body.jsx";
+
+import Box_menu from "./components/box_menu.jsx";
+import Field from "./components/field.jsx";
 import Footer from "./components/footer.jsx";
 import Header_menu from "./components/header_menu.jsx";
 import styled from "styled-components";
@@ -13,7 +15,8 @@ class App extends Component {
         <div>
           <Header />
           <Header_menu />
-          <Body />
+          <Box_menu />
+          <Field />
           <Footer />
         </div>
       </Sty>
@@ -22,4 +25,6 @@ class App extends Component {
 }
 
 export default App;
-const Sty = styled.div`min-width: 800px;`;
+const Sty = styled.div`
+  min-width: 800px;
+`;
