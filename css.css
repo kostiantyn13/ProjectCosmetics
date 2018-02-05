@@ -47,12 +47,35 @@ a:hover { ... } выбирает ссылки при наведении курс
 a:active { ... } выбирает активные ссылки (кнопка мыши зажата на ссылке)
 
 
+background: [bc] [bi] [br] [bp] [ba];
+/* Обозначения:
+[bc] — background-color
+[bi] — background-image
+[br] — background-repeat
+[bp] — background-position
+[ba] — background-attachment
+*/
 
-выбирает ещё не посещённые ссылки.
 
-:visited выбирает посещённые ссылки.
 
-:active выбирает активные ссылки (кнопка мыши зажата на ссылке).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
