@@ -19,4 +19,5 @@ const Container = styled.div`
   height: 100%;
   width: 100px;
   background-color: #7896bf;
+  margin: -1px 0 -1px -1px;
 `;

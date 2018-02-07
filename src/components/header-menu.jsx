@@ -27,7 +27,7 @@ const Container = styled.div`
 const MenuItem = styled(Item)`
   display: inline-block;
   &:hover {
-    background-color: green;
+    background-color: grey;
     cursor: pointer;
   }
 `;
