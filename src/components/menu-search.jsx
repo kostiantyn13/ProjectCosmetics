@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 class MenuSearch extends Component {
   render() {
-    const { props } = this;
+    //const { props } = this;
     return (
-      <Container {...props}>
+      <Container //{...props}
+      >
         <div>Menu Search</div>
       </Container>
     );
