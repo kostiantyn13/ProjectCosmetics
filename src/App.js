@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/header.jsx";
-
-import BoxMenu from "./components/box-menu.jsx";
+import BoxMenu from "./components/boxMenu.jsx";
 import Field from "./components/field.jsx";
 import Footer from "./components/footer.jsx";
 import HeaderMenu from "./components/header-menu.jsx";
@@ -23,4 +22,6 @@ class App extends Component {
 }
 
 export default App;
-const Sty = styled.div`min-width: 800px;`;
+const Sty = styled.div`
+  min-width: 800px;
+`;
