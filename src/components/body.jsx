@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import Box_menu from "./box_menu.jsx";
+import BoxMenu from "./box-menu.jsx";
 import Field from "./field.jsx";
 
 class Body extends Component {
   render() {
     return (
       <Sty>
-        <div>
-          <p>Body</p>
-          <Box_menu />
-          <Field />
-        </div>
+        <BoxMenu />
+        <Field />
       </Sty>
     );
   }

@@ -1,22 +1,27 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import MenuList from "./menu-list.jsx";
 
-class Menu_item extends Component {
+class BoxMenu extends Component {
   render() {
     return (
       <Sty>
-        <div>Menu_item</div>
+        <MenuList />
       </Sty>
     );
   }
 }
 
-export default Menu_item;
+export default BoxMenu;
 
 const Sty = styled.div`
+  border-radius: 10px;
   border: 1px solid black;
-  height: 100%;
-  width: 100px;
+  height: 600px;
+  width: 200px;
   background-color: #7896bf;
+  float: left;
+  box-shadow: 3px 3px 4px #6487b7;
+  padding: 10px;
 `;
