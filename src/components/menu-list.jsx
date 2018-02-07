@@ -5,18 +5,14 @@ import { Search } from "menu-search";
 class MenuList extends Component {
   render() {
     return (
-      <Sty>
+      <MenuSearch>
         <div>Menu search</div>
-      </Sty>
+      </MenuSearch>
     );
   }
 }
 
 export default MenuList;
 
-const Sty = styled.div`
-  border-radius: 10px;
-`;
-const MenuSearch = styled(Search)`
-  background-color: grey;
-`;
+const Sty = styled.div`border-radius: 10px;`;
+const MenuSearch = styled(Search)`background-color: grey;`;
