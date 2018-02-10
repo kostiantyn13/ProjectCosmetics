@@ -6,7 +6,7 @@ import Field from "./components/field.jsx";
 import Footer from "./components/footer.jsx";
 import HeaderMenu from "./components/header-menu.jsx";
 import styled from "styled-components";
-
+/*
 class App extends Component {
   render() {
     return (
@@ -26,8 +26,8 @@ const Sty = styled.div`
   min-width: 800px;
   margin: 0;
   padding: 0;
-`;
-/*function App() {
+`;*/
+function App() {
   return (
     <div>
       <header>
@@ -46,4 +46,3 @@ const Sty = styled.div`
   );
 }
 export default App;
-*/
