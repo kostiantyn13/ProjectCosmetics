@@ -1,4 +1,4 @@
-CSS - «каскадные таблицы стилей»
+/*CSS - «каскадные таблицы стилей»
 
 В CSS существует огромное количество свойств. Их можно разбить группы:
 оформление текста;
@@ -48,48 +48,10 @@ a:active { ... } выбирает активные ссылки (кнопка м
 
 
 background: [bc] [bi] [br] [bp] [ba];
-/* Обозначения:
+Обозначения:
 [bc] — background-color
 [bi] — background-image
 [br] — background-repeat
 [bp] — background-position
 [ba] — background-attachment
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
