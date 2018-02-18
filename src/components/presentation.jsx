@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Availability from "availability";
 
 class Presentation extends Component {
+  getInit;
   render() {
     let product1 = [
       "https://cs5.pikabu.ru/images/previews_comm/2015-09_4/1442736127174715446.jpg",
@@ -24,6 +26,7 @@ class Presentation extends Component {
           <div className="specification">{product[0][2]}</div>
           <div className="price">{product[0][3]}</div>
         </Bod>
+        <Availability />
       </Sty>
     );
   }
@@ -38,11 +41,11 @@ const Sty = styled.div`
   background-color: #e3edf2;
 `;
 const Img = styled.div`
-  background: url(${props => props.product[0][0]}) no-repeat;
   width: 100px;
   height: 100px;
-  float: left;
+  float: left2;
 `;
+/*background: url(${props => props.product[0][0]}) no-repeat;*/
 const Bod = styled.div`
   float: left;
   background-color: #ffffff;
