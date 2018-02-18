@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Availability from "availability";
+import Availability from "./availability";
 
 class Presentation extends Component {
   getInit;
@@ -26,7 +26,7 @@ class Presentation extends Component {
           <div className="specification">{product[0][2]}</div>
           <div className="price">{product[0][3]}</div>
         </Bod>
-        <Availability />
+        <Availability availability={1} />
       </Sty>
     );
   }
