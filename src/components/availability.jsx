@@ -7,9 +7,9 @@ class Availability extends Component {
   render(props) {
     return (
       <button>
-        {props.availability === 1 && "В наличии"}
-        {props.availability === 2 && "Нет в наличии"}
-        {props.availability === 3 && "Под заказ"}
+        {props.availability === "1" && "В наличии"}
+        {props.availability === "2" && "Нет в наличии"}
+        {props.availability === "3" && "Под заказ"}
       </button>
     );
   }

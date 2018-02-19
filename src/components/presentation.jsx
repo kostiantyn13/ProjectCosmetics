@@ -26,7 +26,7 @@ class Presentation extends Component {
           <div className="specification">{product[0][2]}</div>
           <div className="price">{product[0][3]}</div>
         </Bod>
-        <Availability availability={1} />
+        <Availability availability={"1"} />
       </Sty>
     );
   }
