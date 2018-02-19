@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
-import BoxMenu from "./box-menu.jsx";
-import Field from "./field.jsx";
+import BoxMenu from "./box-menu";
+import Field from "./field";
 
 class Body extends Component {
   render() {
@@ -16,6 +15,7 @@ class Body extends Component {
 }
 
 export default Body;
+
 const Sty = styled.div`
   height: 1000px;
   width: 100%;
