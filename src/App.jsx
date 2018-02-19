@@ -20,7 +20,9 @@ class App extends Component {
     );
   }
 }
-
+App.defaultProps = {
+  availability: true
+};
 export default App;
 const Sty = styled.div`
   min-width: 800px;
