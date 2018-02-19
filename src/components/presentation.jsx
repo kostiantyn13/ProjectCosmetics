@@ -4,13 +4,12 @@ import Availability from "./availability";
 import product from "/home/jaguar/cosmetics/src/prod.js";
 
 class Presentation extends Component {
-  getInit;
-  render() {
+  render(props) {
     return (
       <Sty>
         <Img />
-        <Bod>
-          <div className="name">{product[0].name}</div>
+        <Bod avail={true}>
+          <div className="name">{product[`${props.avail ? 0 : 1}`].name}</div>
           <div className="specification">{product[0].administration}</div>
           <div className="price">{product[0].price}</div>
         </Bod>
