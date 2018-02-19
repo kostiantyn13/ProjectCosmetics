@@ -3,20 +3,20 @@ import styled from "styled-components";
 import Availability from "./availability";
 import product from "/home/jaguar/cosmetics/src/prod.js";
 
-class Presentation extends Component {
-  render(props) {
-    return (
-      <Sty>
-        <Img />
-        <Bod avail={true}>
-          <div className="name">{product[`${props.avail ? 0 : 1}`].name}</div>
-          <div className="specification">{product[0].administration}</div>
-          <div className="price">{product[0].price}</div>
-        </Bod>
-        <Availability availability={1} />
-      </Sty>
-    );
-  }
+function Presentation(props) {
+  return (
+    <Sty>
+      <Img />
+      <Bod avail={true}>
+        <div className="name">{product[`${props.avail ? 0 : 1}`].name}</div>
+        <div className="specification">
+          {product[`${props.avail ? 0 : 1}`].administration}
+        </div>
+        <div className="price">{product[`${props.avail ? 0 : 1}`].price}</div>
+      </Bod>
+      <Availability availability={2} />
+    </Sty>
+  );
 }
 
 export default Presentation;
