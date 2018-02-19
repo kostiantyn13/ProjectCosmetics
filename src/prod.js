@@ -1,4 +1,4 @@
-let product = [
+const product = [
   {
     link:
       "https://cs5.pikabu.ru/images/previews_comm/2015-09_4/1442736127174715446.jpg",

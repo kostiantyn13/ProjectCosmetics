@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Availability from "./availability";
-import product from "/home/jaguar/cosmetics/src/prod.js";
+import product from "../prod";
 
 function Presentation(props) {
   return (
     <Sty>
       <Img />
-      <Bod avail={true}>
-        <div className="name">{product[`${props.avail ? 0 : 1}`].name}</div>
-        <div className="specification">
-          {product[`${props.avail ? 0 : 1}`].administration}
-        </div>
-        <div className="price">{product[`${props.avail ? 0 : 1}`].price}</div>
+      <Bod>
+        {product[1].name}
+        <br />
+        {product[1].administration}
+        <br />
+        {product[1].price}
       </Bod>
-      <Availability availability={2} />
+      <Availability available={1} />
     </Sty>
   );
 }
