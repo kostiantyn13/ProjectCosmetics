@@ -1,16 +1,17 @@
 import React, { Components } from "react";
 import styled from "styled-components";
 import product from "../prod";
+import Availability from "./availability";
 
-function Prod() {
-  const { ob } = this.props;
+function Prod(props) {
   return (
     <Bod>
-      {product[{ ob }].name}
+      {product[props.ob].name}
       <br />
-      {product[{ ob }].administration}
+      {product[props.ob].administration}
       <br />
-      {product[{ ob }].price}
+      {product[props.ob].price}
+      <Availability available={1} />
     </Bod>
   );
 }

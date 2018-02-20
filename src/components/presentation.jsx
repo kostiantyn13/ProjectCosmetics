@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Availability from "./availability";
+
 import Prod from "./product";
 
 function Presentation(props) {
@@ -8,8 +8,6 @@ function Presentation(props) {
     <Sty>
       <Img />
       <Prod ob={0} />
-      <Prod ob={1} />
-      <Availability available={1} />
     </Sty>
   );
 }
