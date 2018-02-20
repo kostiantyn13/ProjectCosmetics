@@ -1,19 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Availability from "./availability";
-import product from "../prod";
+import Product from "./product";
 
 function Presentation(props) {
   return (
     <Sty>
       <Img />
-      <Bod>
-        {product[1].name}
-        <br />
-        {product[1].administration}
-        <br />
-        {product[1].price}
-      </Bod>
+      <Product ob={0} />
+      <Product ob={1} />
       <Availability available={1} />
     </Sty>
   );
@@ -34,7 +29,3 @@ const Img = styled.div`
   float: left2;
 `;
 /*background: url(${props => props.product[0][0]}) no-repeat;*/
-const Bod = styled.div`
-  float: left;
-  background-color: #ffffff;
-`;
