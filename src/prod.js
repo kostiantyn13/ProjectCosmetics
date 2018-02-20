@@ -1,5 +1,6 @@
 const product = [
   {
+    id: 1,
     link:
       "https://cs5.pikabu.ru/images/previews_comm/2015-09_4/1442736127174715446.jpg",
     name: "Крем",
@@ -7,6 +8,7 @@ const product = [
     price: "68"
   },
   {
+    id: 2,
     link:
       "http://lamcdn.net/the-village.ru/post_image-image/0eAew_WlbB_QU2B0dKsrrQ-wide.jpg",
     name: "2Крем",

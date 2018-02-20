@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Availability from "./availability";
-import Product from "./product";
+import Prod from "./product";
 
 function Presentation(props) {
   return (
     <Sty>
       <Img />
-      <Product ob={0} />
-      <Product ob={1} />
+      <Prod ob={0} />
+      <Prod ob={1} />
       <Availability available={1} />
     </Sty>
   );
