@@ -4,7 +4,6 @@ import Button from "material-ui/Button";
 class Availability extends Component {
   render() {
     const { available } = this.props;
-    //const available = this.props.available
     return (
       <Button>
         {available === 1 && "В наличии"}

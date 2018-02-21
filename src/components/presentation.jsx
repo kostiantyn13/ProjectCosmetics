@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
+import product from "../prod";
 import Prod from "./product";
 
 function Presentation(props) {
   return (
     <Sty>
-      <Img />
-      <Prod ob={0} />
+      {product.map(elem => (
+        <Prod
+          name={elem.name}
+          administration={elem.administration}
+          price={elem.price}
+        />
+      ))}
     </Sty>
   );
 }
@@ -21,9 +26,3 @@ const Sty = styled.div`
   border-radius: 5px;
   background-color: #e3edf2;
 `;
-const Img = styled.div`
-  width: 100px;
-  height: 100px;
-  float: left2;
-`;
-/*background: url(${props => props.product[0][0]}) no-repeat;*/
