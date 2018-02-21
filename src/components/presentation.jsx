@@ -8,9 +8,12 @@ function Presentation(props) {
     <Sty>
       {product.map(elem => (
         <Prod
+          key={elem.id}
           name={elem.name}
           administration={elem.administration}
           price={elem.price}
+          available={elem.available}
+          link={elem.link}
         />
       ))}
     </Sty>
