@@ -23,6 +23,6 @@ export default Prod;
 const Bod = styled.div`
   float: left;
   background-color: #ffffff;
-  height: 100px;
-  width: 400px;
+  height: 150px;
+  width: calc(100% - 200px);
 `;

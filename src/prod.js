@@ -20,7 +20,7 @@ const product = [
   {
     id: 3,
     link:
-      "http://lamcdn.net/the-village.ru/post_image-image/0eAew_WlbB_QU2B0dKsrrQ-wide.jpg",
+      "https://cs5.pikabu.ru/post_img/2015/09/20/1/1442702475_620640827.jpg",
     name: "3Крем",
     administration: "3Для кожи",
     price: "163",
@@ -29,7 +29,7 @@ const product = [
   {
     id: 4,
     link:
-      "http://lamcdn.net/the-village.ru/post_image-image/0eAew_WlbB_QU2B0dKsrrQ-wide.jpg",
+      "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
     name: "4Крем",
     administration: "4Для сухой кожи",
     price: "72",
