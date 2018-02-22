@@ -5,7 +5,7 @@ const product = [
       "https://cs5.pikabu.ru/images/previews_comm/2015-09_4/1442736127174715446.jpg",
     name: "Крем",
     administration: "Для увлажнения сухой кожи",
-    price: "68",
+    price: "628",
     available: 1
   },
   {
@@ -33,6 +33,24 @@ const product = [
     name: "4Крем",
     administration: "4Для сухой кожи",
     price: "72",
+    available: 2
+  },
+  {
+    id: 5,
+    link:
+      "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
+    name: "5Крем",
+    administration: "5Для сухой кожи",
+    price: "72",
+    available: 2
+  },
+  {
+    id: 6,
+    link:
+      "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
+    name: "6Крем",
+    administration: "6Для сухой кожи",
+    price: "7у2",
     available: 2
   }
 ];
