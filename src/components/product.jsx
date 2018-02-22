@@ -7,7 +7,7 @@ class Prod extends Component {
   render() {
     const { props } = this;
     return (
-      <Bod>
+      <Container>
         <Img link={props.link} />
         {props.name}
         <br />
@@ -16,14 +16,14 @@ class Prod extends Component {
         {props.price}
         <br />
         <Availability available={props.available} />
-      </Bod>
+      </Container>
     );
   }
 }
 
 export default Prod;
 
-const Bod = styled.div`
+const Container = styled.div`
   float: left;
   background-color: #ffffff;
   height: 150px;

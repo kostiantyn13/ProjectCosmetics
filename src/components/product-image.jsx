@@ -1,13 +1,13 @@
 import React, { Components } from "react";
 import styled from "styled-components";
 
-function Img(props) {
+const Img = props => {
   return (
-    <Border>
+    <Container>
       <Image alt="no photo" src={props.link} />
-    </Border>
+    </Container>
   );
-}
+};
 export default Img;
 
 const Image = styled.img`
@@ -16,7 +16,7 @@ const Image = styled.img`
   max-width: 100%;
   max-height: 100%;
 `;
-const Border = styled.div`
+const Container = styled.div`
   width: 200px;
   height: 100%;
   float: left;
