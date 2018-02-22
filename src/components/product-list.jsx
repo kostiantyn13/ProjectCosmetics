@@ -5,10 +5,10 @@
 // не используется
 // не используется
 
-import React, { Components } from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 
-class MenuList extends Components {
+class MenuList extends Component {
   render() {
     return <List>rrr</List>;
   }

@@ -1,21 +1,24 @@
-import React, { Components } from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import Availability from "./availability";
 import Img from "./product-image";
 
-function Prod(props) {
-  return (
-    <Bod>
-      <Img link={props.link} />
-      {props.name}
-      <br />
-      {props.administration}
-      <br />
-      {props.price}
-      <br />
-      <Availability available={props.available} />
-    </Bod>
-  );
+class Prod extends Component {
+  render() {
+    const { props } = this;
+    return (
+      <Bod>
+        <Img link={props.link} />
+        {props.name}
+        <br />
+        {props.administration}
+        <br />
+        {props.price}
+        <br />
+        <Availability available={props.available} />
+      </Bod>
+    );
+  }
 }
 
 export default Prod;
