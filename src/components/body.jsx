@@ -6,17 +6,17 @@ import Field from "./field";
 class Body extends Component {
   render() {
     return (
-      <Sty>
+      <Container>
         <BoxMenu />
         <Field />
-      </Sty>
+      </Container>
     );
   }
 }
 
 export default Body;
 
-const Sty = styled.div`
+const Container = styled.div`
   height: 1000px;
   width: 100%;
   border: 1px solid black;

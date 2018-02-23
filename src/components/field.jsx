@@ -6,20 +6,20 @@ import Goods from "./goods.jsx";
 class Field extends Component {
   render() {
     return (
-      <Sty>
+      <Container>
         <div>
           <p>Field</p>
           <Presentation />
           <Goods />
         </div>
-      </Sty>
+      </Container>
     );
   }
 }
 
 export default Field;
 
-const Sty = styled.div`
+const Container = styled.div`
   height: 600px;
   margin-left: 210px;
   width: calc(100%-210px);

@@ -4,16 +4,16 @@ import styled from "styled-components";
 class Header extends Component {
   render() {
     return (
-      <Sty>
+      <Container>
         <div>Header</div>
-      </Sty>
+      </Container>
     );
   }
 }
 
 export default Header;
 
-const Sty = styled.div`
+const Container = styled.div`
   height: 100px;
   width: 100%;
   border: 1px solid green;

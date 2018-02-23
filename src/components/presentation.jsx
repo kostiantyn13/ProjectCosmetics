@@ -5,7 +5,7 @@ import Prod from "./product";
 
 function Presentation(props) {
   return (
-    <Sty>
+    <Container>
       {product.map(elem => (
         <Prod
           key={elem.id}
@@ -16,13 +16,13 @@ function Presentation(props) {
           link={elem.link}
         />
       ))}
-    </Sty>
+    </Container>
   );
 }
 
 export default Presentation;
 
-const Sty = styled.div`
+const Container = styled.div`
   height: 400px;
   width: 100%;
   border: 1px solid black;

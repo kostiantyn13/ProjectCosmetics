@@ -6,16 +6,16 @@ import MenuList from "./menu-list.jsx";
 class BoxMenu extends Component {
   render() {
     return (
-      <Sty>
+      <Container>
         <MenuList />
-      </Sty>
+      </Container>
     );
   }
 }
 
 export default BoxMenu;
 
-const Sty = styled.div`
+const Container = styled.div`
   border-radius: 10px;
   border: 1px solid black;
   height: 600px;

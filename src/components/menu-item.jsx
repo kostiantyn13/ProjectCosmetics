@@ -4,11 +4,7 @@ import styled from "styled-components";
 class MenuItem extends Component {
   render() {
     const { props } = this;
-    return (
-      <Container {...props}>
-        <div>Menu Item</div>
-      </Container>
-    );
+    return <Container {...props}>Menu Item</Container>;
   }
 }
 
