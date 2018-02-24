@@ -4,17 +4,6 @@ import product from "../prod";
 import Prod from "./product";
 
 class Presentation extends Component {
-  constructor() {
-    super();
-    this.state = {
-      available: 1
-    };
-  }
-  this.aval(event){
-    this.setState({
-      this.state.available: 2
-    })
-  }
   render() {
     return (
       <Container>
@@ -24,7 +13,6 @@ class Presentation extends Component {
             name={elem.name}
             administration={elem.administration}
             price={elem.price}
-            available={this.state.available}
             link={elem.link}
           />
         ))}

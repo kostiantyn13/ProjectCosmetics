@@ -15,7 +15,7 @@ class Prod extends Component {
         <br />
         {props.price}
         <br />
-        <Availability available={props.available} onClick={this.aval} />
+        <Availability />
       </Container>
     );
   }
