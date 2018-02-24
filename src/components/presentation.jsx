@@ -3,21 +3,34 @@ import styled from "styled-components";
 import product from "../prod";
 import Prod from "./product";
 
-function Presentation(props) {
-  return (
-    <Container>
-      {product.map(elem => (
-        <Prod
-          key={elem.id}
-          name={elem.name}
-          administration={elem.administration}
-          price={elem.price}
-          available={elem.available}
-          link={elem.link}
-        />
-      ))}
-    </Container>
-  );
+class Presentation extends Component {
+  constructor() {
+    super();
+    this.state = {
+      available: 1
+    };
+  }
+  this.aval(event){
+    this.setState({
+      this.state.available: 2
+    })
+  }
+  render() {
+    return (
+      <Container>
+        {product.map(elem => (
+          <Prod
+            key={elem.id}
+            name={elem.name}
+            administration={elem.administration}
+            price={elem.price}
+            available={this.state.available}
+            link={elem.link}
+          />
+        ))}
+      </Container>
+    );
+  }
 }
 
 export default Presentation;
