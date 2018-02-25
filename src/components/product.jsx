@@ -15,7 +15,7 @@ class Prod extends Component {
         <br />
         {props.price}
         <br />
-        <Availability />
+        <Availability initiallyAvailable={props.available} />
       </Container>
     );
   }

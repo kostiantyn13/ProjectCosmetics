@@ -14,6 +14,7 @@ class Presentation extends Component {
             administration={elem.administration}
             price={elem.price}
             link={elem.link}
+            available={elem.available}
           />
         ))}
       </Container>
