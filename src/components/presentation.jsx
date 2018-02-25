@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import product from "../prod";
 import Prod from "./product";
+import Form from "./form";
 
 class Presentation extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Presentation extends Component {
   render() {
     return (
       <Container>
+        <Form />
         {product.map(elem => (
           <Prod
             key={elem.id}
