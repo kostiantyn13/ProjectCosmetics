@@ -6,7 +6,8 @@ const product = [
     name: "Крем",
     administration: "Для увлажнения сухой кожи",
     price: "628",
-    available: 1
+    available: 1,
+    wish: true
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const product = [
     name: "2Крем",
     administration: "2Для увлажнения сухой кожи",
     price: "268",
-    available: 1
+    available: 1,
+    wish: false
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const product = [
     name: "3Крем",
     administration: "3Для кожи",
     price: "163",
-    available: 3
+    available: 3,
+    wish: true
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ const product = [
     name: "4Крем",
     administration: "4Для сухой кожи",
     price: "72",
-    available: 2
+    available: 2,
+    wish: false
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ const product = [
     name: "5Крем",
     administration: "5Для сухой кожи",
     price: "72",
-    available: 2
+    available: 2,
+    wish: false
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ const product = [
     name: "6Крем",
     administration: "6Для сухой кожи",
     price: "7у2",
-    available: 2
+    available: 2,
+    wish: false
   }
 ];
 

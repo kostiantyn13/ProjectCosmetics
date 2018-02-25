@@ -7,15 +7,18 @@ class Presentation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      wish: false
+      product: this.props.product
     };
     this.handleStatusWish = this.handleStatusWish.bind(this);
   }
   handleStatusWish(id) {
-    this.setState({
-      wish: !this.state.wish
+    const wish = product.map(el => {
+      if (el.id === id) {
+        el.wish = !el.wish;
+      }
+      return el;
     });
-    console.log(id);
+    this.setState({ wish }); //wish: wish
   }
   render() {
     return (
@@ -23,6 +26,7 @@ class Presentation extends Component {
         {product.map(elem => (
           <Prod
             key={elem.id}
+            wish={elem.wish}
             id={elem.id}
             name={elem.name}
             administration={elem.administration}

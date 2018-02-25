@@ -20,7 +20,7 @@ class Prod extends Component {
         {props.price}
         <br />
         <Availability initiallyAvailable={props.available} />
-        <Wish onWish={props.onStatusWish} />
+        <Wish wish={props.wish} onWish={() => props.onStatusWish(props.id)} />
       </Container>
     );
   }
