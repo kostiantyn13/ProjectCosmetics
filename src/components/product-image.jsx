@@ -1,13 +1,12 @@
 import React, { Components } from "react";
 import styled from "styled-components";
 
-const Img = props => {
-  return (
-    <Container>
-      <Image alt="no photo" src={props.link} />
-    </Container>
-  );
-};
+const Img = props => (
+  <Container>
+    <Image alt="no photo" src={props.link} />
+  </Container>
+);
+
 export default Img;
 
 const Image = styled.img`

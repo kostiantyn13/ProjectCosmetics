@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "material-ui/Button";
 import PropTypes from "prop-types";
+
 class Availability extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +27,8 @@ class Availability extends Component {
     );
   }
 }
+//без Availability.propTypes работает
 Availability.propTypes = {
-  initiallyAvailable: React.PropTypes.number.isRequired
+  initiallyAvailable: PropTypes.number.isRequired
 };
 export default Availability;
