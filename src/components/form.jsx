@@ -13,6 +13,7 @@ class Form extends Component {
     event.preventDefault();
     console.log(this.refs.photo.value);
     console.log(this.refs.name.value);
+    console.log(this.refs.for.value);
   }
 
   render() {
@@ -20,7 +21,7 @@ class Form extends Component {
       <Container className="product-form" onSubmit={this.handleSubmit}>
         <input type="text" ref="photo" placeholder="Фото" />
         <input type="text" ref="name" placeholder="Название" />
-        <input type="text" ref="name" placeholder="Назначение" />
+        <input type="text" ref="for" placeholder="Назначение" />
         <input type="text" ref="administration" placeholder="Цена" />
         <input type="text" ref="available" placeholder="Наличие" />
         <input type="text" ref="wish" placeholder="Нравится ли?" />
