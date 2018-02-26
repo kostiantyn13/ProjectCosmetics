@@ -6,16 +6,24 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(this.refs.photo.value);
+    console.log(this.refs.name.value);
+  }
+
   render() {
     return (
-      <Container className="product-form">
-        <input type="text" placeholder="Фото" />
-        <input type="text" placeholder="Название" />
-        <input type="text" placeholder="Назначение" />
-        <input type="text" placeholder="Цена" />
-        <input type="text" placeholder="Наличие" />
-        <input type="text" placeholder="Нравится ли?" />
+      <Container className="product-form" onSubmit={this.handleSubmit}>
+        <input type="text" ref="photo" placeholder="Фото" />
+        <input type="text" ref="name" placeholder="Название" />
+        <input type="text" ref="name" placeholder="Назначение" />
+        <input type="text" ref="administration" placeholder="Цена" />
+        <input type="text" ref="available" placeholder="Наличие" />
+        <input type="text" ref="wish" placeholder="Нравится ли?" />
 
         <ButtonAdd />
       </Container>

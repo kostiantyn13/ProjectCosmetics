@@ -2,7 +2,7 @@ import React from "react";
 import Button from "material-ui/Button";
 
 const ButtonAdd = () => {
-  return <Button> Add </Button>;
+  return <Button type="submit"> Add </Button>;
 };
 
 export default ButtonAdd;
