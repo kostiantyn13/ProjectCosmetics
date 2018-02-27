@@ -11,6 +11,10 @@ class Presentation extends Component {
       product: this.props.product
     };
     this.handleStatusWish = this.handleStatusWish.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+  }
+  handleAdd(photo) {
+    console.log(photo);
   }
   handleStatusWish(id) {
     const wish = product.map(el => {
@@ -24,7 +28,7 @@ class Presentation extends Component {
   render() {
     return (
       <Container>
-        <Form />
+        <Form onAdd={this.handleAdd} />
         {product.map(elem => (
           <Prod
             key={elem.id}

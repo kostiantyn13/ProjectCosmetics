@@ -11,12 +11,10 @@ class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.refs.photo.value);
-    console.log(this.refs.name.value);
-    console.log(this.refs.for.value);
-    console.log(this.refs.administration.value);
-    console.log(this.refs.available.value);
-    console.log(this.refs.wish.value);
+    const photo = this.refs.photo.value;
+    if (photo) {
+      this.props.onAdd(photo);
+    }
   }
 
   render() {
