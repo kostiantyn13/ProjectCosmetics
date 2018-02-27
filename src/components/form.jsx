@@ -14,6 +14,9 @@ class Form extends Component {
     console.log(this.refs.photo.value);
     console.log(this.refs.name.value);
     console.log(this.refs.for.value);
+    console.log(this.refs.administration.value);
+    console.log(this.refs.available.value);
+    console.log(this.refs.wish.value);
   }
 
   render() {
