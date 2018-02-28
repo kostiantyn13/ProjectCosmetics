@@ -15,6 +15,17 @@ class Presentation extends Component {
   }
   handleAdd(param1, param2) {
     console.log(param1 + "fffs" + param2);
+
+    /*{
+      id: 4,
+      link:
+        "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
+      name: "4Крем",
+      administration: "4Для сухой кожи",
+      price: "72",
+      available: 2,
+      wish: false
+    },*/
   }
   handleStatusWish(id) {
     const wish = product.map(el => {
