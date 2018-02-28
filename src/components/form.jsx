@@ -12,8 +12,9 @@ class Form extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const photo = this.refs.photo.value;
-    if (photo) {
-      this.props.onAdd(photo);
+    const name = this.refs.name.value;
+    if (photo && name) {
+      this.props.onAdd(photo, name);
     }
   }
 
@@ -26,7 +27,6 @@ class Form extends Component {
         <input type="text" ref="administration" placeholder="Цена" />
         <input type="text" ref="available" placeholder="Наличие" />
         <input type="text" ref="wish" placeholder="Нравится ли?" />
-
         <ButtonAdd />
       </Container>
     );

@@ -13,8 +13,8 @@ class Presentation extends Component {
     this.handleStatusWish = this.handleStatusWish.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
   }
-  handleAdd(photo) {
-    console.log(photo);
+  handleAdd(param1, param2) {
+    console.log(param1 + "fffs" + param2);
   }
   handleStatusWish(id) {
     const wish = product.map(el => {
