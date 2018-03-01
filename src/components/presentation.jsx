@@ -13,19 +13,22 @@ class Presentation extends Component {
     this.handleStatusWish = this.handleStatusWish.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
   }
-  handleAdd(param1, param2) {
-    console.log(param1 + "fffs" + param2);
-
-    /*{
-      id: 4,
-      link:
-        "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
-      name: "4Крем",
-      administration: "4Для сухой кожи",
-      price: "72",
-      available: 2,
-      wish: false
-    },*/
+  idNext() {
+    const count = product.length;
+    return this.count++;
+  }
+  handleAdd(link, name, administration, price, available, wish) {
+    const add_product = {
+      id: this.idNext(),
+      link,
+      name,
+      administration,
+      price,
+      available,
+      wish
+    };
+    const productAdd = [...this.state.product, add_product];
+    this.setState({ productAdd });
   }
   handleStatusWish(id) {
     const wish = product.map(el => {

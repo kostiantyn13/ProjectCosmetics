@@ -11,20 +11,30 @@ class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const photo = this.refs.photo.value;
+    const link = this.refs.link.value;
     const name = this.refs.name.value;
-    if (photo && name) {
-      this.props.onAdd(photo, name);
+    const administration = this.refs.administration.value;
+    const price = this.refs.price.value;
+    const available = this.refs.available.value;
+    const wish = this.refs.wish.value;
+    if (!available) {
+      this.available = 3;
+    }
+    if (!wish) {
+      this.wish = false;
+    }
+    if (link && name && administration && price && available) {
+      this.props.onAdd(link, name, administration, price, available, wish);
     }
   }
 
   render() {
     return (
       <Container className="product-form" onSubmit={this.handleSubmit}>
-        <input type="text" ref="photo" placeholder="Фото" />
+        <input type="text" ref="link" placeholder="Фото" />
         <input type="text" ref="name" placeholder="Название" />
-        <input type="text" ref="for" placeholder="Назначение" />
-        <input type="text" ref="administration" placeholder="Цена" />
+        <input type="text" ref="administration" placeholder="Назначение" />
+        <input type="text" ref="price" placeholder="Цена" />
         <input type="text" ref="available" placeholder="Наличие" />
         <input type="text" ref="wish" placeholder="Нравится ли?" />
         <ButtonAdd />
