@@ -15,19 +15,9 @@ class Presentation extends Component {
   }
   idNext() {
     let count = this.state.product.length;
-    return (count += 2);
+    return (count += 1);
   }
   handleAdd(link, name, administration, price, available, wish) {
-    console.log(
-      "handleAdd",
-      link,
-      name,
-      administration,
-      price,
-      available,
-      wish
-    );
-    console.log("product", this.state.product);
     const add_product = {
       id: this.idNext(),
       link,
@@ -41,13 +31,13 @@ class Presentation extends Component {
     this.setState({ product });
   }
   handleStatusWish(id) {
-    const wish = product.map(el => {
+    let wish = this.state.product.map(el => {
       if (el.id === id) {
         el.wish = !el.wish;
       }
       return el;
     });
-    this.setState({ wish }); //wish: wish
+    this.setState({ wish });
   }
   render() {
     return (
