@@ -27,8 +27,8 @@ class Presentation extends Component {
       available,
       wish
     };
-    const productAdd = [...this.state.product, add_product];
-    this.setState({ productAdd });
+    this.product = [...this.state.product, add_product];
+    this.setState({ product });
   }
   handleStatusWish(id) {
     const wish = product.map(el => {
