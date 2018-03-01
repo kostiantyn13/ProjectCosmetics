@@ -11,18 +11,15 @@ class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const link = this.refs.link.value;
+    const link =
+      this.refs.link.value ||
+      "http://hronika.info/uploads/posts/2016-12/1482503119_suschestva9.jpg";
     const name = this.refs.name.value;
     const administration = this.refs.administration.value;
     const price = this.refs.price.value;
-    const available = this.refs.available.value;
-    const wish = this.refs.wish.value;
-    if (!available) {
-      this.available = 3;
-    }
-    if (!wish) {
-      this.wish = false;
-    }
+    const available = this.refs.available.value || 3;
+    const wish = this.refs.wish.value || false;
+
     if (link && name && administration && price && available) {
       this.props.onAdd(link, name, administration, price, available, wish);
     }
@@ -32,9 +29,14 @@ class Form extends Component {
     return (
       <Container className="product-form" onSubmit={this.handleSubmit}>
         <input type="text" ref="link" placeholder="Фото" />
-        <input type="text" ref="name" placeholder="Название" />
-        <input type="text" ref="administration" placeholder="Назначение" />
-        <input type="text" ref="price" placeholder="Цена" />
+        <input type="text" ref="name" placeholder="Название" value="name" />
+        <input
+          type="text"
+          ref="administration"
+          placeholder="Назначение"
+          value="admin"
+        />
+        <input type="text" ref="price" placeholder="Цена" value={6} />
         <input type="text" ref="available" placeholder="Наличие" />
         <input type="text" ref="wish" placeholder="Нравится ли?" />
         <ButtonAdd />

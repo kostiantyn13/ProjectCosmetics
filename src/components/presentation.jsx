@@ -8,16 +8,26 @@ class Presentation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      product: this.props.product
+      product: product
     };
     this.handleStatusWish = this.handleStatusWish.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
   }
   idNext() {
-    const count = product.length;
-    return this.count++;
+    let count = this.state.product.length;
+    return (count += 2);
   }
   handleAdd(link, name, administration, price, available, wish) {
+    console.log(
+      "handleAdd",
+      link,
+      name,
+      administration,
+      price,
+      available,
+      wish
+    );
+    console.log("product", this.state.product);
     const add_product = {
       id: this.idNext(),
       link,
@@ -27,7 +37,7 @@ class Presentation extends Component {
       available,
       wish
     };
-    this.product = [...this.state.product, add_product];
+    const product = [...this.state.product, add_product];
     this.setState({ product });
   }
   handleStatusWish(id) {
@@ -43,7 +53,7 @@ class Presentation extends Component {
     return (
       <Container>
         <Form onAdd={this.handleAdd} />
-        {product.map(elem => (
+        {this.state.product.map(elem => (
           <Prod
             key={elem.id}
             wish={elem.wish}
