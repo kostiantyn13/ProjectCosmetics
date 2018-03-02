@@ -12,6 +12,7 @@ class Presentation extends Component {
     };
     this.handleStatusWish = this.handleStatusWish.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
   idNext() {
     let count = this.state.product.length;
@@ -30,6 +31,7 @@ class Presentation extends Component {
     const product = [...this.state.product, add_product];
     this.setState({ product });
   }
+  handleChange() {}
   handleStatusWish(id) {
     let wish = this.state.product.map(el => {
       if (el.id === id) {
@@ -42,7 +44,7 @@ class Presentation extends Component {
   render() {
     return (
       <Container>
-        <Form onAdd={this.handleAdd} />
+        <Form onAdd={this.handleAdd} onChange={this.handleChange} />
         {this.state.product.map(elem => (
           <Prod
             key={elem.id}

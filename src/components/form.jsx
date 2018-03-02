@@ -27,18 +27,32 @@ class Form extends Component {
 
   render() {
     return (
-      <Container className="product-form" onSubmit={this.handleSubmit}>
+      <Container
+        className="product-form"
+        onSubmit={this.handleSubmit}
+        onChange={this.onChange}
+      >
         <input type="text" ref="link" placeholder="Фото" />
-        <input type="text" ref="name" placeholder="Название" value="name" />
+        <input
+          type="text"
+          ref="name"
+          placeholder="Название"
+          defaultValue="Собака"
+        />
         <input
           type="text"
           ref="administration"
           placeholder="Назначение"
-          value="admin"
+          defaultValue="Для повышения настроения"
         />
-        <input type="text" ref="price" placeholder="Цена" value={6} />
+        <input type="text" ref="price" placeholder="Цена" defaultValue={999} />
         <input type="text" ref="available" placeholder="Наличие" />
-        <input type="text" ref="wish" placeholder="Нравится ли?" />
+        <input
+          type="text"
+          ref="wish"
+          placeholder="Нравится ли?"
+          defaultValue={true}
+        />
         <ButtonAdd />
       </Container>
     );
