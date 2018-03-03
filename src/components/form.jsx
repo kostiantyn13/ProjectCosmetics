@@ -5,8 +5,11 @@ import styled from "styled-components";
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      name: ""
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handlerChange = this.handlerChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -25,19 +28,23 @@ class Form extends Component {
     }
   }
 
+  handlerChange(event) {
+    let name = event.target.value;
+
+    //let name = this.refs.name.value;   --- можно и так
+    this.setState({ name });
+  }
+
   render() {
     return (
-      <Container
-        className="product-form"
-        onSubmit={this.handleSubmit}
-        onChange={this.onChange}
-      >
+      <Container className="product-form" onSubmit={this.handleSubmit}>
         <input type="text" ref="link" placeholder="Фото" />
         <input
+          onChange={this.handlerChange}
           type="text"
           ref="name"
           placeholder="Название"
-          defaultValue="Собака"
+          value={this.state.name}
         />
         <input
           type="text"
