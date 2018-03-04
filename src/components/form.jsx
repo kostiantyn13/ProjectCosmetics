@@ -33,7 +33,11 @@ class Form extends Component {
     //let name = this.refs.name.value;   --- можно и так
     this.setState({ name });
   }
-
+  handlerDel(event) {
+    let name = event.target.value;
+    //let name = this.refs.name.value;   --- можно и так
+    this.setState({ name });
+  }
   render() {
     return (
       <Container className="product-form" onSubmit={this.handleSubmit}>
