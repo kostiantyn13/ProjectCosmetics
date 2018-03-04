@@ -30,7 +30,6 @@ class Form extends Component {
 
   handlerChange(event) {
     let name = event.target.value;
-
     //let name = this.refs.name.value;   --- можно и так
     this.setState({ name });
   }
