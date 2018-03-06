@@ -12,6 +12,7 @@ class Presentation extends Component {
     };
     this.handleStatusWish = this.handleStatusWish.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
   idNext() {
     let count = this.state.product.length;
@@ -40,6 +41,14 @@ class Presentation extends Component {
     });
     this.setState({ wish });
   }
+
+  handleDelete(id) {
+    const idMas = id - 1;
+    const product = this.state.product.filter(el => el.id != idMas);
+    console.log(id);
+    this.setState({ product });
+  }
+
   render() {
     return (
       <Container>
@@ -55,6 +64,7 @@ class Presentation extends Component {
             link={elem.link}
             available={elem.available}
             onStatusWish={this.handleStatusWish}
+            onDelete={this.handleDelete}
           />
         ))}
       </Container>
