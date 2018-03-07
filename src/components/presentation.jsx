@@ -43,7 +43,6 @@ class Presentation extends Component {
   }
 
   handleDelete(id) {
-    const idMas = id - 1;
     const product = this.state.product.filter(el => el.id != idMas);
     console.log(id);
     this.setState({ product });
