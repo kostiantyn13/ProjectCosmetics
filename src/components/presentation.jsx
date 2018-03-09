@@ -18,6 +18,9 @@ class Presentation extends Component {
     this.handleDelete = this.handleDelete.bind(this);
   }
   idNext() {
+    if (!this.state.product.length) {
+      return 1;
+    }
     let count = this.state.product.length;
     let idLast = this.state.product[count - 1].id;
     return (idLast += 1);
@@ -57,9 +60,13 @@ class Presentation extends Component {
         <Form onAdd={this.handleAdd} />
         <CSSTransitionGroup
           component="section"
-          transitionName="example"
+          transitionName="slide"
+          transitionAppear={true}
+          transitionAppearTimeout={5000}
+          //transitionEnter={false}
+          //transitionLeave={false}
           transitionTimeout={500}
-          transitionLeaveTimeout={0}
+          transitionLeaveTimeout={500}
         >
           {this.state.product.map(elem => (
             <Prod
