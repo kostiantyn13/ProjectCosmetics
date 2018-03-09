@@ -16,7 +16,8 @@ class Presentation extends Component {
   }
   idNext() {
     let count = this.state.product.length;
-    return (count += 1);
+    let idLast = this.state.product[count - 1].id;
+    return (idLast += 1);
   }
   handleAdd(link, name, administration, price, available, wish) {
     const add_product = {
@@ -43,8 +44,7 @@ class Presentation extends Component {
   }
 
   handleDelete(id) {
-    const product = this.state.product.filter(el => el.id != idMas);
-    console.log(id);
+    const product = this.state.product.filter(el => el.id !== id);
     this.setState({ product });
   }
 

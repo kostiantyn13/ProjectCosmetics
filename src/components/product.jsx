@@ -18,7 +18,7 @@ class Prod extends Component {
         <br />
         <Availability initiallyAvailable={props.available} />
         <Wish wish={props.wish} onWish={() => props.onStatusWish(props.id)} />
-        <button onClick={props.onDelete(props.id)}>Удалить</button>
+        <button onClick={() => props.onDelete(props.id)}>Удалить</button>
       </Container>
     );
   }
