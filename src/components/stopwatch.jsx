@@ -52,8 +52,8 @@ class Stopwatch extends Component {
   timeStopwatch(milliseconds) {
     let totalSeconds = Math.floor(milliseconds / 1000);
     let second = totalSeconds % 60;
-    let minute = Math.floor(totalSeconds / 60);
-    let hour = Math.floor(totalSeconds / 3600);
+    let minute = Math.floor(totalSeconds / 60) % 60;
+    let hour = Math.floor(totalSeconds / 3600) % 24;
     return `${hour > 9 ? hour : "0" + hour}:${
       minute > 9 ? minute : "0" + minute
     }:${second > 9 ? second : "0" + second}`;

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { CSSTransitionGroup } from "react-transition-group";
+
 import product from "../prod";
+
 import Prod from "./product";
 import Form from "./form";
 
@@ -52,20 +55,27 @@ class Presentation extends Component {
     return (
       <Container>
         <Form onAdd={this.handleAdd} />
-        {this.state.product.map(elem => (
-          <Prod
-            key={elem.id}
-            wish={elem.wish}
-            id={elem.id}
-            name={elem.name}
-            administration={elem.administration}
-            price={elem.price}
-            link={elem.link}
-            available={elem.available}
-            onStatusWish={this.handleStatusWish}
-            onDelete={this.handleDelete}
-          />
-        ))}
+        <CSSTransitionGroup
+          component="section"
+          transitionName="example"
+          transitionTimeout={500}
+          transitionLeaveTimeout={0}
+        >
+          {this.state.product.map(elem => (
+            <Prod
+              key={elem.id}
+              wish={elem.wish}
+              id={elem.id}
+              name={elem.name}
+              administration={elem.administration}
+              price={elem.price}
+              link={elem.link}
+              available={elem.available}
+              onStatusWish={this.handleStatusWish}
+              onDelete={this.handleDelete}
+            />
+          ))}
+        </CSSTransitionGroup>
       </Container>
     );
   }
