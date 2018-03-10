@@ -29,7 +29,7 @@ app.get("/api/prod", (req, res) => {
 
 app.post("/api/prod", (req, res) => {
   let product = {
-    id: req.body.id,
+    id: idNext(),
     link: req.body.link,
     name: req.body.name,
     administration: req.body.administration,

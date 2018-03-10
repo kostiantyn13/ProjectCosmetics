@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { CSSTransitionGroup } from "react-transition-group";
+import axios from "axios";
 
-import product from "../prod";
+//import product from "../prod";
 
 import Prod from "./product";
 import Form from "./form";
@@ -11,7 +12,7 @@ class Presentation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      product: product
+      product: []
     };
     this.handleStatusWish = this.handleStatusWish.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
@@ -24,6 +25,13 @@ class Presentation extends Component {
     let count = this.state.product.length;
     let idLast = this.state.product[count - 1].id;
     return (idLast += 1);
+  }
+  componentDidMount() {
+    axios
+      .get("http://localhost:3000/api/prod")
+      .then(response => response.data)
+      .then(product => this.setState({ product }))
+      .catch(error => console.error(error.message));
   }
   handleAdd(link, name, administration, price, available, wish) {
     const add_product = {
@@ -65,7 +73,7 @@ class Presentation extends Component {
           transitionAppearTimeout={5000}
           //transitionEnter={false}
           //transitionLeave={false}
-          transitionTimeout={500}
+          transitionEnterTimeout={500}
           transitionLeaveTimeout={500}
         >
           {this.state.product.map(elem => (
