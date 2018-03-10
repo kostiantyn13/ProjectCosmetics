@@ -18,14 +18,6 @@ class Presentation extends Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
-  /*idNext() {
-    if (!this.state.product.length) {
-      return 1;
-    }
-    let count = this.state.product.length;
-    let idLast = this.state.product[count - 1].id;
-    return (idLast += 1);
-  }*/
   componentDidMount() {
     axios
       .get("http://localhost:3000/api/prod")
