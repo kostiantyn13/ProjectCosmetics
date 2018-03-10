@@ -18,50 +18,59 @@ class Presentation extends Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
-  idNext() {
+  /*idNext() {
     if (!this.state.product.length) {
       return 1;
     }
     let count = this.state.product.length;
     let idLast = this.state.product[count - 1].id;
     return (idLast += 1);
-  }
+  }*/
   componentDidMount() {
     axios
       .get("http://localhost:3000/api/prod")
       .then(response => response.data)
       .then(product => this.setState({ product }))
-      .catch(error => console.error(error.message));
+      .catch(this.handleError);
   }
   handleAdd(link, name, administration, price, available, wish) {
-    const add_product = {
-      id: this.idNext(),
-      link,
-      name,
-      administration,
-      price,
-      available,
-      wish
-    };
-    const product = [...this.state.product, add_product];
-    this.setState({ product });
+    axios
+      .post("/api/prod", { link, name, administration, price, available, wish })
+      .then(response => response.data)
+      .then(add_product => {
+        const product = [...this.state.product, add_product];
+        this.setState({ product });
+      })
+      .catch(this.handleError);
   }
 
   handleStatusWish(id) {
-    let wish = this.state.product.map(el => {
-      if (el.id === id) {
-        el.wish = !el.wish;
-      }
-      return el;
-    });
-    this.setState({ wish });
+    axios
+      .patch(`/api/prod/${id}`)
+      .then(response => {
+        let product = this.state.product.map(el => {
+          if (el.id === id) {
+            el = response.data;
+          }
+          return el;
+        });
+        this.setState({ product });
+      })
+      .catch(this.handleError);
   }
 
   handleDelete(id) {
-    const product = this.state.product.filter(el => el.id !== id);
-    this.setState({ product });
+    axios
+      .delete(`/api/prod/${id}`)
+      .then(() => {
+        const product = this.state.product.filter(el => el.id !== id);
+        this.setState({ product });
+      })
+      .catch(this.handleError);
   }
-
+  handleError(error) {
+    console.error(error);
+  }
   render() {
     return (
       <Container>
