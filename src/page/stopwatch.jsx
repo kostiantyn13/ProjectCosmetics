@@ -61,34 +61,32 @@ class Stopwatch extends Component {
   render() {
     const { state } = this;
     return (
-      <Watch>
+      <Container>
         <Scoreboard>{this.timeStopwatch(state.elapse)}</Scoreboard>
 
         {state.running ? (
-          <But onClick={this.buttonPause}>PAUSE</But>
+          <Button onClick={this.buttonPause}>PAUSE</Button>
         ) : (
-          <But onClick={this.buttonStart}>START</But>
+          <Button onClick={this.buttonStart}>START</Button>
         )}
 
-        <But onClick={this.buttonStop}>STOP</But>
-      </Watch>
+        <Button onClick={this.buttonStop}>STOP</Button>
+      </Container>
     );
   }
 }
 
 export default Stopwatch;
 
-const Watch = styled.div`
+const Container = styled.div`
   height: 36px;
   width: 307px;
   border: 1px solid #669900;
+  margin: 300px auto;
 `;
 const Scoreboard = styled.div`
   display: block;
   float: left;
   padding: 10px;
   width: 100px;
-`;
-const But = styled(Button)`
-  background-color: 100px;
 `;
