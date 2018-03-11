@@ -65,12 +65,12 @@ class Stopwatch extends Component {
         <Scoreboard>{this.timeStopwatch(state.elapse)}</Scoreboard>
 
         {state.running ? (
-          <Button onClick={this.buttonPause}>PAUSE</Button>
+          <But onClick={this.buttonPause}>PAUSE</But>
         ) : (
-          <Button onClick={this.buttonStart}>START</Button>
+          <But onClick={this.buttonStart}>START</But>
         )}
 
-        <Button onClick={this.buttonStop}>STOP</Button>
+        <But onClick={this.buttonStop}>STOP</But>
       </Watch>
     );
   }
@@ -88,4 +88,7 @@ const Scoreboard = styled.div`
   float: left;
   padding: 10px;
   width: 100px;
+`;
+const But = styled(Button)`
+  background-color: 100px;
 `;

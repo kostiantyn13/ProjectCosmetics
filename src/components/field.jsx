@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Presentation from "./presentation";
-import Goods from "./goods";
-import Stopwatch from "./stopwatch";
 
 class Field extends Component {
   render() {
@@ -10,9 +8,7 @@ class Field extends Component {
       <Container>
         <div>
           <p>Field</p>
-          <Stopwatch />
           <Presentation />
-          <Goods />
         </div>
       </Container>
     );
