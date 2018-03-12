@@ -1,14 +1,26 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import styled from "styled-components";
 
 class SideNav extends Component {
+  state={
+    product = []
+  }
+  componentDidMount() {
+    
+    axios
+      .get("http://localhost:3000/api/prod")
+      .then(response => response.data)
+      .then(product => this.setState({ product }))
+      .catch(error => console.error(error));
+  }
   render() {
     return (
       <Container>
         <aside className="mdc-permanent-drawer">
           <nav className="mdc-list mdc-list--avatar-list">
-            <a>Vitalik</a>
+            {this.state.product.map(el => <a>{el.id}</a>)}
           </nav>
         </aside>
       </Container>
