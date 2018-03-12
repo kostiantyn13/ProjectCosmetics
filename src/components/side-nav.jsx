@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
-import MenuList from "./menu-list.jsx";
 
 class SideNav extends Component {
   render() {
     return (
       <Container>
-        <MenuList />
+        <aside className="mdc-permanent-drawer">
+          <nav className="mdc-list mdc-list--avatar-list">
+            <a>Vitalik</a>
+          </nav>
+        </aside>
       </Container>
     );
   }
