@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import MenuList from "./menu-list.jsx";
 
-class BoxMenu extends Component {
+class SideNav extends Component {
   render() {
     return (
       <Container>
@@ -13,7 +13,7 @@ class BoxMenu extends Component {
   }
 }
 
-export default BoxMenu;
+export default SideNav;
 
 const Container = styled.div`
   border-radius: 10px;

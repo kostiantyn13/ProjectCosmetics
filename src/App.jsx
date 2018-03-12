@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/header";
-import BoxMenu from "./components/box-menu";
+import SideNav from "./components/side-nav";
 import Field from "./components/field";
 import Footer from "./components/footer";
 import Toolbar from "./components/toolbar";
@@ -20,7 +20,7 @@ class App extends Component {
         <Sty>
           <Header />
           <Toolbar />
-          <Route exact path="/" component={BoxMenu} />
+          <Route exact path="/" component={SideNav} />
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/delivery" component={Delivery} />
