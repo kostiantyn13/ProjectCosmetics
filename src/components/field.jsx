@@ -8,7 +8,7 @@ class Field extends Component {
       <Container>
         <div>
           <p>Field</p>
-          <Presentation />
+          <Presentation {...this.props} />
         </div>
       </Container>
     );

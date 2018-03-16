@@ -26,7 +26,7 @@ class SideNav extends Component {
             {this.state.product.map(el => (
               <NavLink
                 key={el.id}
-                to={`/${el.id}`}
+                to={`/product/${el.name}`}
                 className="mdc-list-item"
                 activeClassName="mdc-temporary-drawer--selected"
               >

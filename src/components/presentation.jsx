@@ -3,14 +3,12 @@ import styled from "styled-components";
 import { CSSTransitionGroup } from "react-transition-group";
 import axios from "axios";
 
-//import product from "../prod";
-
 import Prod from "./product";
 import Form from "./form";
 
 class Presentation extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       product: []
     };
@@ -64,6 +62,13 @@ class Presentation extends Component {
     console.error(error);
   }
   render() {
+    if (this.state.product.name) {
+      const product = this.state.product.filter(el => {
+        el.name === this.props.match.params.topic;
+      });
+      this.setState({ product });
+    }
+    console.log(this.props.match.params.topic);
     return (
       <Container>
         <Form onAdd={this.handleAdd} />

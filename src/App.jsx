@@ -7,6 +7,7 @@ import SideNav from "./components/side-nav";
 import Field from "./components/field";
 import Footer from "./components/footer";
 import Toolbar from "./components/toolbar";
+import Prod from "./components/product";
 
 import About from "./page/about";
 import Delivery from "./page/delivery";
@@ -27,7 +28,9 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/delivery" component={Delivery} />
             <Route path="/stopwatch" component={Stopwatch} />
-            <Route path="/product" component={Field} />
+            <Route exact path="/product" component={Field} />
+            <Route path="/product/:topic" component={Field} />
+            <Route path="/product/:prod/:available" component={Prod} />
             <Route component={NotFound} />
           </Switch>
           <Footer />
