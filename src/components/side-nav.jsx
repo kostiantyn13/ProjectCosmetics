@@ -4,11 +4,14 @@ import axios from "axios";
 import styled from "styled-components";
 
 class SideNav extends Component {
-  state={
-    product = []
+  constructor() {
+    super();
+    this.state = {
+      product: []
+    };
   }
+
   componentDidMount() {
-    
     axios
       .get("http://localhost:3000/api/prod")
       .then(response => response.data)
