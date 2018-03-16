@@ -15,6 +15,7 @@ class Presentation extends Component {
     this.handleStatusWish = this.handleStatusWish.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.filterProduct = this.filterProduct.bind(this);
   }
   componentDidMount() {
     axios
@@ -61,14 +62,15 @@ class Presentation extends Component {
   handleError(error) {
     console.error(error);
   }
+  filterProduct() {
+    const product = this.state.product.filter(
+      el => el.name === this.props.match.params.topic
+    );
+    this.setState({ product });
+  }
   render() {
-    if (this.state.product.name) {
-      const product = this.state.product.filter(el => {
-        el.name === this.props.match.params.topic;
-      });
-      this.setState({ product });
-    }
-    console.log(this.props.match.params.topic);
+    this.filterProduct();
+
     return (
       <Container>
         <Form onAdd={this.handleAdd} />
