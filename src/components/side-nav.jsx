@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 class SideNav extends Component {
   constructor() {
@@ -23,7 +23,16 @@ class SideNav extends Component {
       <Container>
         <aside className="mdc-permanent-drawer">
           <nav className="mdc-list mdc-list--avatar-list">
-            {this.state.product.map(el => <a>{el.id}</a>)}
+            {this.state.product.map(el => (
+              <NavLink
+                key={el.id}
+                to={`/${el.id}`}
+                className="mdc-list-item"
+                activeClassName="mdc-temporary-drawer--selected"
+              >
+                {el.name}
+              </NavLink>
+            ))}
           </nav>
         </aside>
       </Container>

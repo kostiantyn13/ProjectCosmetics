@@ -12,6 +12,7 @@ import About from "./page/about";
 import Delivery from "./page/delivery";
 import Stopwatch from "./page/stopwatch";
 import NotFound from "./page/not-found";
+import Home from "./page/home";
 
 class App extends Component {
   render() {
@@ -20,12 +21,13 @@ class App extends Component {
         <Sty>
           <Header />
           <Toolbar />
-          <Route exact path="/" component={SideNav} />
+          <Route path="/product" component={SideNav} />
           <Switch>
+            <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/delivery" component={Delivery} />
             <Route path="/stopwatch" component={Stopwatch} />
-            <Route exact path="/" component={Field} />
+            <Route path="/product" component={Field} />
             <Route component={NotFound} />
           </Switch>
           <Footer />

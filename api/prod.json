@@ -23,7 +23,7 @@
     "id": 3,
     "link":
       "https://cs5.pikabu.ru/post_img/2015/09/20/1/1442702475_620640827.jpg",
-    "name": "Крем",
+    "name": "Гель",
     "administration": "Для кожи",
     "price": 163,
     "available": 3,
@@ -33,7 +33,7 @@
     "id": 4,
     "link":
       "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
-    "name": "Крем",
+    "name": "Гель",
     "administration": "Для сухой кожи",
     "price": 72,
     "available": 2,
@@ -43,7 +43,7 @@
     "id": 5,
     "link":
       "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
-    "name": "Крем",
+    "name": "Тоник",
     "administration": "Для сухой кожи",
     "price": 72,
     "available": 2,
@@ -53,7 +53,7 @@
     "id": 6,
     "link":
       "http://lamcdn.net/the-village.ru/post_image-image/VA6rzx9pLr5trnlUg3iDbA-wide.jpg",
-    "name": "Крем",
+    "name": "Тоник",
     "administration": "Для сухой кожи",
     "price": 98,
     "available": 2,

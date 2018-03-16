@@ -8,8 +8,9 @@ function Toolbar() {
     <Container className="mdc-toolbar">
       <nav className="mdc-tab-bar">
         <ToolbarLink exact to="/">
-          Косметика
+          COSMO
         </ToolbarLink>
+        <ToolbarLink to="/product">Косметика</ToolbarLink>
         <ToolbarLink to="/stopwatch">Секундомер</ToolbarLink>
         <ToolbarLink to="/delivery">Доставка и оплата</ToolbarLink>
         <ToolbarLink to="/about">О магазине</ToolbarLink>
