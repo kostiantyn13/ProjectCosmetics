@@ -69,7 +69,7 @@ class Presentation extends Component {
     this.setState({ product });
   }
   render() {
-    this.filterProduct();
+   // this.filterProduct();
 
     return (
       <Container>

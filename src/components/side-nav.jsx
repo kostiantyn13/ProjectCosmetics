@@ -23,7 +23,7 @@ class SideNav extends Component {
       <Container>
         <aside className="mdc-permanent-drawer">
           <nav className="mdc-list mdc-list--avatar-list">
-            {this.state.product.map(el => (
+            {this.state.product.unique().map(el => (
               <NavLink
                 key={el.id}
                 to={`/product/${el.name}`}
