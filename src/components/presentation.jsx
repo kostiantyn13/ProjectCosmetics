@@ -69,7 +69,7 @@ class Presentation extends Component {
     this.setState({ product });
   }
   render() {
-   // this.filterProduct();
+    // this.filterProduct();
 
     return (
       <Container>
@@ -79,7 +79,7 @@ class Presentation extends Component {
           transitionName="slide"
           transitionAppear={true}
           transitionAppearTimeout={5000}
-          //transitionEnter={false}
+          // transitionEnter={false}
           //transitionLeave={false}
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}

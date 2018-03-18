@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import * as R from "ramda";
 
 class SideNav extends Component {
   constructor() {
@@ -11,6 +12,31 @@ class SideNav extends Component {
     };
   }
 
+  renderItem(item) {
+    return (
+      <NavLink
+        key={item.id}
+        to={`/product/${item.name}`}
+        className="mdc-list-item"
+        activeClassName="mdc-temporary-drawer--selected"
+      >
+        {item.name}
+      </NavLink>
+    );
+  }
+
+  renderAll() {
+    return (
+      <NavLink
+        key={0}
+        to="/product/all"
+        className="mdc-list-item"
+        activeClassName="mdc-temporary-drawer--selected"
+      >
+        Все товары
+      </NavLink>
+    );
+  }
   componentDidMount() {
     axios
       .get("http://localhost:3000/api/prod")
@@ -23,16 +49,10 @@ class SideNav extends Component {
       <Container>
         <aside className="mdc-permanent-drawer">
           <nav className="mdc-list mdc-list--avatar-list">
-            {this.state.product.unique().map(el => (
-              <NavLink
-                key={el.id}
-                to={`/product/${el.name}`}
-                className="mdc-list-item"
-                activeClassName="mdc-temporary-drawer--selected"
-              >
-                {el.name}
-              </NavLink>
-            ))}
+            {this.renderAll()}
+            {R.compose(R.map(this.renderItem), R.uniqBy(R.prop("name")))(
+              this.state.product
+            )}
           </nav>
         </aside>
       </Container>
