@@ -1,4 +1,4 @@
-export function createStore(reduser, initialState) {
+/*export function createStore(reduser, initialState) {
   let state = initialState;
   let callbacks = [];
   const getState = () => state;
@@ -12,10 +12,12 @@ export function createStore(reduser, initialState) {
   };
   dispatch({});
   return { getState, dispatch, subscribe };
-}
+}*/
 
-/*function updateState(state, action) {
+function updateState(state, action) {
+  // state == { count: 0 }
   if (action.type === "INCREMENT") {
+    // { count: 1 }
     return { count: state.count + action.amount }; //c уя ли это именно свойство обьекта state??
   } else if (action.type === "DECREMENT") {
     return { count: state.count - action.amount };
@@ -35,9 +37,9 @@ class Store {
     return this._state;
   }
 
-  updete(action) {
+  update(action) {
     this._state = this._updateState(this._state, action);
-    this._callback.forEach(callback => callback());
+    this._callback.forEach(callback => callback(this._state));
   }
 
   subscribe(callback) {
@@ -47,7 +49,7 @@ class Store {
   }
 }
 
-export default Store;
+// export default Store;
 
 const initialState = { count: 0 };
 
@@ -56,13 +58,40 @@ const store = new Store(updateState, initialState);
 const incrementAction = { type: "INCREMENT", amount: 5 };
 const decrementAction = { type: "DECREMENT", amount: 3 };
 
-const unsubscribe = store.subscribe(() =>
-  console.log("Новый state " + store.state)
-);
+let x = 0;
+let y = null;
 
-store.subscribe(() => console.log("Новый state = " + store.state));
+console.log("state1", store.state);
+console.log("test1x", x);
+console.log("test2y", y);
 
-store.updete(incrementAction);
-unsubscribe();
-store.updete(decrementAction);
-store.updete({});*/
+const setX = amount => (x = amount);
+console.log("subscribing X");
+store.subscribe(st => setX(st.count));
+
+// store.subscribe(st => console.log("Новый state = " + st.count));
+
+store.update(incrementAction);
+console.log("state2", store.state);
+console.log("test2x", x);
+console.log("test2y", y);
+// unsubscribe();
+store.update(decrementAction);
+console.log("state2", store.state);
+console.log("test3x", x);
+console.log("test3y", y);
+// store.update(incrementAction);
+
+const setY = amount => (y = amount);
+console.log("subscribing Y");
+store.subscribe(st => setY(st.count));
+
+store.update(incrementAction);
+console.log("state4", store.state);
+console.log("test4x", x);
+console.log("test4y", y);
+
+store.update(incrementAction);
+console.log("state5", store.state);
+console.log("test5x", x);
+console.log("test5y", y);
