@@ -31,6 +31,8 @@ class Store {
   }
 }
 
+export default Store;
+
 const initialState = { count: 0 };
 
 const store = new Store(updateState, initialState);
