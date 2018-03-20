@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Store from "./reducer";
+import { createStore } from "./reducer";
 
 const initialState = { count: 0 };
 const incrementAction = { type: "INCREMENT", amount: 1 };
 const decrementAction = { type: "DECREMENT", amount: 1 };
 const resetAction = { type: "RESET" };
 
-function updateState(state, action) {
+function reducer(state = { count: 0 }, action) {
   switch (action.type) {
     case "INCREMENT":
       return { count: state.count + action.amount };
@@ -19,7 +19,7 @@ function updateState(state, action) {
   }
 }
 
-const store = new Store(updateState, initialState);
+const store = createStore(reducer, initialState);
 
 class Counter extends Component {
   constructor(props) {
@@ -39,21 +39,22 @@ class Counter extends Component {
   }
 
   increment() {
-    store.updete(incrementAction);
+    store.dispatch(incrementAction);
   }
 
   decrement() {
-    store.updete(decrementAction);
+    store.dispatch(decrementAction);
   }
 
   reset() {
-    store.updete(resetAction);
+    store.dispatch(resetAction);
   }
 
   render() {
+    const count = store.getState().count;
     return (
       <div>
-        <span>{store.state.count}</span>
+        <span>{count}</span>
         <div>
           <button onClick={this.decrement}>-</button>
           <button onClick={this.increment}>+</button>

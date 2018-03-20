@@ -1,4 +1,20 @@
-function updateState(state, action) {
+export function createStore(reduser, initialState) {
+  let state = initialState;
+  let callbacks = [];
+  const getState = () => state;
+  const dispatch = action => {
+    state = reduser(state, action);
+    callbacks.forEach(callback => callback());
+  };
+  const subscribe = callback => {
+    callbacks.push(callback);
+    return () => callbacks.filter(cb => cb !== callback);
+  };
+  dispatch({});
+  return { getState, dispatch, subscribe };
+}
+
+/*function updateState(state, action) {
   if (action.type === "INCREMENT") {
     return { count: state.count + action.amount }; //c уя ли это именно свойство обьекта state??
   } else if (action.type === "DECREMENT") {
@@ -49,4 +65,4 @@ store.subscribe(() => console.log("Новый state = " + store.state));
 store.updete(incrementAction);
 unsubscribe();
 store.updete(decrementAction);
-store.updete({});
+store.updete({});*/
