@@ -1,4 +1,4 @@
-export function createStore(reduser, initialState) {
+/*export function createStore(reduser, initialState) {
   let state = initialState;
   let callbacks = [];
   const getState = () => state;
@@ -12,8 +12,8 @@ export function createStore(reduser, initialState) {
   };
   dispatch({});
   return { getState, dispatch, subscribe };
-}
-/*
+}*/
+
 function updateState(state, action) {
   // state == { count: 0 }
   if (action.type === "INCREMENT") {
@@ -95,4 +95,3 @@ store.update(incrementAction);
 console.log("state5", store.state);
 console.log("test5x", x);
 console.log("test5y", y);
-*/
