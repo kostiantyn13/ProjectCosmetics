@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Button from "material-ui/Button";
 
-import Counter from "../counter";
-
 class Stopwatch extends Component {
   constructor(props) {
     super(props);
@@ -73,7 +71,6 @@ class Stopwatch extends Component {
         )}
 
         <Button onClick={this.buttonStop}>STOP</Button>
-        <Counter />
       </Container>
     );
   }
